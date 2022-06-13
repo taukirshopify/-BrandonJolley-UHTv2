@@ -1814,4 +1814,11 @@ footer .social_icons a, footer .social_icons a:visited {
 .featurdtopmargin {
   padding: 40px 0;
 }
+
+.collapgetabcss ul {
+  margin-left: 20px !important;
+}
+.collapgetabcss ul li {
+  font-size: 13px !important;
+}
 /*# sourceMappingURL=style.css.map */

@@ -409,6 +409,45 @@
                   {% endif %}
                 </details>
               {% endif %}
+ 
+              {% when 'Collasinle-Description' %}
+                {% if block.settings.collapsible_tab_heading != blank %}
+                  <details class="collapsible-tab">
+                    <summary class="collapsible-tab__heading">
+                      <span>{{ block.settings.collapsible_tab_heading | escape }}</span>
+    
+                    </summary>
+  
+                    <div class="collapsible-tab__text  collapgetabcss">
+                       
+                       {% if product.description contains '[short_description]' %}
+                        {% assign short_description_first = product.description | split: '[/short_description]' | first %}
+                        {% assign short_description_final = short_description_first | split: '[short_description]' | last %}
+                        {{ short_description_final }}
+                        {% endif %}
+                    </div>
+  
+                  </details>
+                {% endif %}
+              {% when 'SizeChartdetails' %}
+                {% if block.settings.collapsible_tab_heading != blank %}
+                  <details class="collapsible-tab">
+                    <summary class="collapsible-tab__heading">
+                      <span>{{ block.settings.collapsible_tab_heading | escape }}</span>
+    
+                    </summary>
+  
+                    <div class="collapsible-tab__text  collapgetabcss">
+                       
+                      {% if product.description contains '[short_descriptiona]' %}
+                        {% assign short_description_firsta = product.description | split: '[/short_descriptiona]' | first %}
+                        {% assign short_description_finala = short_description_first | split: '[short_descriptiona]' | last %}
+                        {{ short_description_firsta }}
+                        {% endif %}
+                    </div>
+  
+                  </details>
+                {% endif %}
             {% when 'tabs' %}
               {% assign tabs_below_product_gallery = false %}
 
@@ -542,6 +581,8 @@
           {% endcase %}
         </div>
       {% endfor %}
+
+      
     </div>
 
     {% if product.description != blank and product.description contains "<!-- split -->" %}
@@ -585,3 +626,16 @@
   <script defer src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
   <script defer src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
 {% endif %}
+
+
+
+<style>
+ul {
+  display: inline-block;
+  margin: 32px 0 32px 25px;
+  padding: 0;
+}
+div{
+margin: 10px 0;
+}
+</style>
