@@ -1806,4 +1806,12 @@ footer .social_icons a, footer .social_icons a:visited {
   border-radius: 30px;
   text-decoration: none;
 }
+
+.section-wrapper .under-menu:nth-child(1) .full-width--true, .section-wrapper .under-menu:nth-child(1) .full-width--false {
+  margin-top: 0;
+}
+
+.featurdtopmargin {
+  padding: 40px 0;
+}
 /*# sourceMappingURL=style.css.map */

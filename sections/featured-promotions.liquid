@@ -27,6 +27,7 @@
 {% if blocks.size > 0 %}
   <section
     class="
+    featurdtopmargin
       section
       {% if section.settings.wide_display == true %}
         is-width-wide
@@ -41,6 +42,9 @@
         js-featured-promotions
         featured-promotions
         full-width--{{ section.settings.wide_display }}
+
+
+        
       "
       data-promo-animation="{{ section.settings.featured_links_animation }}"
     >

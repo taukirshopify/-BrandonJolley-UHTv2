@@ -4,6 +4,16 @@
   data-section-id="{{ section.id }}"
 >
 </script>
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 <div class="container">
   {% render 'product__structured-data' %}
@@ -36,6 +46,8 @@
       is-flex-wrap
     "
   >
+
+ {% include 'varinat-image-filter' %}
     {%
       render 'product',
       context: 'product',
@@ -57,6 +69,209 @@
     %}
   </section>
 </div>
+
+
+  <script>
+      
+  $(document).ready(function(){
+        const  arr = [{% for color_option in product.options_by_name['Color'].values %}
+        {% if forloop.last == true %}
+        ' {{ color_option }}'
+        {% else %}
+        ' {{ color_option }}',
+        {% endif %}
+        {% endfor %}];
+        const  aaarr = [ {% for variant in product.variants %}
+          {% if forloop.last == true %}
+            "{{ variant.image | img_url: '2048x' }}"
+            {% else %}
+            "{{ variant.image | img_url: '2048x' }}",
+          {% endif %}          
+        {% endfor%} ];
+        
+
+        {% comment %} start of all have allvalue (title and image)  {% endcomment %}
+
+      const allvalue = [ {% for variant in product.variants %}
+        {% if forloop.last == true %}
+          [ '{{ variant.title }}' , 
+            
+            {% if  variant.image != blank %}
+            
+            '{{ variant.image |img_url: '2048x' }}' 
+          {% endif %}
+          
+          ]
+        
+      {% else %}
+      
+      [ '{{ variant.title }}' ,
+        
+        {% if  variant.image != blank %}
+        '{{ variant.image | img_url: '2048x' }}'
+      {% endif %}
+      ],
+
+
+      {% endif %}
+
+
+      {% endfor%} 
+      ];
+
+
+        {% comment %} end of all have allvalue (title and image)  
+      console.log(allvalue);
+
+{% endcomment %}
+    
+const filtercolorandimage = [];
+     
+      jQuery.each( allvalue, function( i, val ) {
+          var productNameTitle = val[0].trim().toString();
+          console.log(productNameTitle);
+          jQuery.each( arr,function( i, vala ) {
+
+            console.log(vala);
+            var getinnervalue = vala.trim().toString();
+         
+            let position = productNameTitle.includes(getinnervalue);
+            
+            if(position === true && typeof val[1] != 'undefined' ){
+
+
+              filtercolorandimage.push([ vala,    val[1]    ])
+              return console.log([ vala,    val[1]    ]);
+          } 
+              
+          
+         
+        
+           
+          });
+  
+          
+        return ;
+      });
+
+    
+
+       console.log(filtercolorandimage);
+
+       var finaloutput =  filtercolorandimage.map(JSON.stringify).filter((e,i,a) => i === a.indexOf(e)).map(JSON.parse);
+
+       console.log(finaloutput);
+
+       jQuery.each( arr, function( i, val ) {
+        var arra = jQuery(".swatch").find("div[data-value='"+ val.trim() +"']").children().css( {"background": "url('"+finaloutput[i][1]+"')", "background-size": "cover", "border-radius": "30px"} );
+
+      return ;
+    });
+
+
+
+
+
+
+
+});
+  
+  
+
+  
+  </script>
+
+
+
+  {% comment%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    =================last 5.22pm ============
+          $(document).ready(function(){
+  const  arr = [{% for color_option in product.options_by_name['Color'].values %}
+  {% if forloop.last == true %}
+   ' {{ color_option }}'
+  {% else %}
+  ' {{ color_option }}',
+  {% endif %}
+  {% endfor %}];
+ const  varintimagelink = [ {% for variant in product.variants %}
+    {% if forloop.last == true %}
+      "{{ variant.image | img_url: '2048x' }}"
+      {% else %}
+      "{{ variant.image | img_url: '2048x' }}",
+    {% endif %}          
+  {% endfor%} ],
+   
+  jQuery.each( arr, function( i, val ) {
+    var arra = jQuery(".swatch").find("div[data-value='"+ val.trim() +"']").children().css( {"background": "url(https://cdn.shopify.com/s/files/1/0549/6605/9105/products/14.1_5000x.jpg?v=1639119191)", "background-size": "cover"} );
+    console.log(this);
+    console.log(arra);
+  return ;
+});
+  
+});
+  
+    =================last 5.22pm ============
+  <script>
+    $(document).ready(function(){
+  (function ($) {
+  const  arr = [{% for color_option in product.options_by_name['Color'].values %}
+  {% if forloop.last == true %}
+   ' {{ color_option }}'
+  {% else %}
+  ' {{ color_option }}',
+  {% endif %}
+  {% endfor %}];
+   
+  jQuery.each( arr, function( i, val ) {
+    var arra = $(".swatch").find("div[data-value='LightPink']").children().css( "background-color", "red" );
+  return ;
+});
+   var arra = $(".swatch").find("div[data-value='LightPink']").children().css( "background-color", "red" );
+
+   console.log(arra);
+  
+  })(jQuery);});
+  
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+ (function ($) {
+       $(function(){
+          $("#text").click(function(){
+           var id= $(".id").html();
+          $('.htmaaaaaaaal').html("<div class='new' id='" + id + "'>jitender</div>");
+             });
+       });
+
+})(jQuery);
+});
+    </script>
+  {% endcomment%}
 
 {% schema %}
 {
@@ -433,3 +648,26 @@
 }
 
 {% endschema %}
+
+
+<style>
+  
+  .swatch-element.color.swatch-element label {
+    padding: 0;
+    margin: 0;
+    width: 52px;
+    border-radius: 30px;
+    height: 52px;
+}
+.full-wrapper img{
+width:80px
+}
+
+.swatch-element.color {
+  border-radius: 30px;
+}
+
+.tooltip{background-color: #000 !important;
+  background-image: none !important;}
+  </style>
+
