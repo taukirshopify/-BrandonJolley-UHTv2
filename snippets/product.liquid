@@ -439,15 +439,17 @@
   
                     <div class="collapsible-tab__text  collapgetabcss">
                        
-                      {% if product.description contains '[short_descriptiona]' %}
-                        {% assign sizechartfirst = product.description | split: '[/short_descriptiona]' | first %}
-                        {% assign sizechartfinal = sizechartfirst | split: '[short_descriptiona]' | last %}
+                      {% if product.description contains '[short_chart]' %}
+                        {% assign sizechartfirst = product.description | split: '[/short_chart]' | first %}
+                        {% assign sizechartfinal = sizechartfirst | split: '[short_chart]' | last %}
+                    
                         {{ sizechartfinal }}
                         {% endif %}
                     </div>
   
                   </details>
                 {% endif %}
+   
             {% when 'tabs' %}
               {% assign tabs_below_product_gallery = false %}
 
@@ -635,7 +637,5 @@ ul {
   margin: 32px 0 32px 25px;
   padding: 0;
 }
-div{
-margin: 10px 0;
-}
+
 </style>
