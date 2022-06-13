@@ -58,33 +58,12 @@
             "feature_collection": "",
             "image": "shopify:\/\/shop_images\/Americana_Tile_600x_d577eb49-23a6-458b-a54d-d99347eea127.png"
           }
-        },
-        "block-4": {
-          "type": "collection",
-          "settings": {
-            "feature_collection": ""
-          }
-        },
-        "block-5": {
-          "type": "collection",
-          "settings": {
-            "feature_collection": ""
-          }
-        },
-        "block-6": {
-          "type": "collection",
-          "settings": {
-            "feature_collection": ""
-          }
         }
       },
       "block_order": [
         "block-1",
         "block-2",
-        "block-3",
-        "block-4",
-        "block-5",
-        "block-6"
+        "block-3"
       ],
       "settings": {
         "title": "Collection list",
