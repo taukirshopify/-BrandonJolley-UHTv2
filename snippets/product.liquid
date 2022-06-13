@@ -440,9 +440,9 @@
                     <div class="collapsible-tab__text  collapgetabcss">
                        
                       {% if product.description contains '[short_descriptiona]' %}
-                        {% assign short_description_firsta = product.description | split: '[/short_descriptiona]' | first %}
-                        {% assign short_description_finala = short_description_first | split: '[short_descriptiona]' | last %}
-                        {{ short_description_firsta }}
+                        {% assign sizechartfirst = product.description | split: '[/short_descriptiona]' | first %}
+                        {% assign sizechartfinal = sizechartfirst | split: '[short_descriptiona]' | last %}
+                        {{ sizechartfinal }}
                         {% endif %}
                     </div>
   
