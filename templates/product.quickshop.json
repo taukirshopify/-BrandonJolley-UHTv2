@@ -5,24 +5,40 @@
       "type": "quickshop",
       "blocks": {
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {
+          }
         },
         "price": {
-          "type": "price"
-        },
-        "description": {
-          "type": "description"
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
         },
         "form": {
-          "type": "form"
+          "type": "form",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title",
         "price",
-        "description",
         "form"
-      ]
+      ],
+      "settings": {
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": true
+      }
     }
   },
   "order": [
