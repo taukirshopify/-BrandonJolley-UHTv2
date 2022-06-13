@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-sidebar-template"
+    },
+    "newsletter": {
+      "type": "newsletter"
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

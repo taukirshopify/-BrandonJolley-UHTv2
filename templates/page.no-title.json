@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-no-title-template"
+    },
+    "newsletter": {
+      "type": "newsletter"
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

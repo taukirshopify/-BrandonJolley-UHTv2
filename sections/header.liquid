@@ -1,0 +1,247 @@
+<script
+  type="application/json"
+  data-section-type="header"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% comment %} Structured data {% endcomment %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    {% if section.settings.logo %}
+      {% assign image_size = section.settings.logo.width | append:'x' %}
+      "logo": "https:{{ section.settings.logo | img_url: image_size }}",
+    {% endif %}
+    "sameAs": [
+      "{{ settings.twitter_link }}",
+      "{{ settings.facebook_link }}",
+      "{{ settings.pinterest_link }}",
+      "{{ settings.instagram_link }}",
+      "{{ settings.tumblr_link }}",
+      "{{ settings.snapchat_link }}",
+      "{{ settings.youtube_link }}",
+      "{{ settings.vimeo_link }}"
+    ],
+    "url": "{{ shop.url }}{{ page.url }}"
+  }
+</script>
+
+{% if template.name == 'index' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "{{ shop.name }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ routes.search_url }}?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "{{ shop.url }}{{ page.url }}"
+    }
+  </script>
+{% endif %}
+
+{%- assign locale_selector = false -%}
+{%- assign currency_selector = false -%}
+
+{%- if section.settings.show_currency_selector and shop.enabled_currencies.size > 1 -%}
+  {%- assign currency_selector = true -%}
+{%- endif -%}
+
+{%- if section.settings.show_locale_selector and shop.published_locales.size > 1 -%}
+  {%- assign locale_selector = true -%}
+{%- endif -%}
+
+{% comment %}Mobile navigation{% endcomment %}
+
+
+
+
+
+<div class="header-anounce-bar  anounce-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center anouce-text">
+          <p>BOGO On All Masks. Mix and Match. <a href="">Details</a></p>
+      
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-wrapperr">
+
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-2  col-sm-6 offset-sm-3 offset-md-0">
+        <div class="logo"> 
+           <a href="/">
+            <img src=" {{section.settings.img | img_url: ''}}" alt="">
+           </a>
+      
+      </div>
+      </div>
+      <div class="col-md-8 d-none d-md-block">
+        <div class="menu-wrapper text-center">
+            <ul>
+              {% for link in linklists.main-menu.links %}
+              {% assign child_list_handle = link.title | handleize %}
+          
+              {% if linklists[child_list_handle].links != blank %}
+              <li><a class="fast {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }} <i class="fa fa-angle-down"></i></a>
+          
+          
+              
+          
+          
+                <ul class="sub-menu">
+                  {% for childlink in linklists[child_list_handle].links %}
+                  {% assign grand_child_link_handle = childlink.title | handleize %}
+                   
+                  
+                        {% if linklists[grand_child_link_handle] and linklists[grand_child_link_handle].links.size > 0 %}
+                
+                          <div class="tas">
+                            <h3 class="hedding-border">
+                              <a href="{{ childlink.url }}">{{ childlink.title }}</a>
+                            </h3>
+                              <ul>
+
+                              
+                                  {% for grand_child_link in linklists[grand_child_link_handle].links %}
+                                  
+                                  
+                                  
+                              <li>   <a href="{{ grand_child_link.url }}">{{ grand_child_link.title }}</a></li> 
+                                   
+                        
+                                  {% endfor %}
+                                </ul>
+                  
+                          </div>
+                        {% else %}
+                 
+                    
+                   
+                       <li> <a href="{{ childlink.url }}">{{ childlink.title }}</a></li> 
+                 
+                     {% endif %}
+                   
+          
+                  {% endfor %}
+                </ul>
+          
+          
+          
+              </li>
+              {% else %}
+              <li><a class="fast {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }} </a></li>
+          
+              {% endif %}
+          
+          
+          
+              {% endfor %}
+            </ul>
+        </div>
+      </div>
+      <div class="col-4 d-md-none">
+        <div class="mobile-menu">
+          <div class="mobile-menu-button">
+            <button class="ma5menu__toggle" type="button">
+                <span class="ma5menu__icon-toggle"></span><span class="ma5menu__sr-only">Menu</span>
+            </button>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-8">
+        <div class="right-user-icon">
+          <ul class="d-flex align-items-center justify-content-end">
+            <li><a  class="search-icon">
+                <div class="svg-icon">
+                  <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg>
+                </div>
+                <div class="svg-iconc">
+           
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000"  class="d-none" viewBox="0 0 24 24" width="24px"                ><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/>
+                    </svg>
+          
+                </div>
+            </a></li>
+            <li><a href="{{ routes.account_login_url }}">
+                <div class="svg-iconaaa">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 100 100"><path d="M59.3 52.2C65.8 48.2 70 40.3 70 33c0-10.4-8.5-22-20-22S30 22.6 30 33c0 7.3 4.2 15.2 10.7 19.2C25.3 56.3 14 70.4 14 87c0 1.1.9 2 2 2h68c1.1 0 2-.9 2-2 0-16.6-11.3-30.7-26.7-34.8zM34 33c0-10.3 8.5-18 16-18s16 7.7 16 18-8.5 18-16 18-16-7.7-16-18zM18.1 85c1-16.7 15-30 31.9-30s30.9 13.3 31.9 30H18.1z"/><path fill="#00F" d="M1224-790V894H-560V-790h1784m8-8H-568V902h1800V-798z"/></svg>
+                </div>
+            </a></li>
+            <li>
+              <a class="cart-drawer-btn1 {% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %}  dropdown_link" data-no-instant>
+                <span class="cart_count">{{ cart.item_count }}</span>
+              </a>
+           </li>
+
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="search-wrapper">
+  {% include  'searchbar' %}
+  
+</div>
+
+
+
+{% include  'mobilemenu-sidebar' %}
+
+
+
+<script>
+  (() => {
+    const header = document.querySelector('[data-header-feature-image="true"]');
+    if (header) {
+      header.classList.add('feature_image');
+    }
+
+    const headerContent = document.querySelector('[data-header-is-absolute="true"]');
+    if (header) {
+      header.classList.add('is-absolute');
+    }
+  })();
+</script>
+
+<style>
+  div.header__logo,
+  div.header__logo img,
+  div.header__logo span,
+  .sticky_nav .menu-position--block .header__logo {
+    max-width: {{ section.settings.logo_display_width | append: 'px' }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "shopify-section--header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Select you Logo"
+    }
+  ]
+
+}
+
+{% endschema %}
+

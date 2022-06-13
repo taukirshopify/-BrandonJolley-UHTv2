@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "404-template"
+    },
+    "newsletter": {
+      "type": "newsletter"
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

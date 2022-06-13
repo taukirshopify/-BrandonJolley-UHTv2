@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-sub-collections-template"
+    },
+    "newsletter": {
+      "type": "newsletter"
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}
