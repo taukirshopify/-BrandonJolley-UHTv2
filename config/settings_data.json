@@ -1,5 +1,9 @@
 {
   "current": {
+    "product_form_style": "radio",
+    "display_product_quantity": true,
+    "limit_quantity": true,
+    "display_inventory_left": true,
     "sections": {
       "header": {
         "type": "header",
