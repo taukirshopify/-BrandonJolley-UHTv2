@@ -22,7 +22,7 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "info",
               "social_icons_footer": false
             }
           },
