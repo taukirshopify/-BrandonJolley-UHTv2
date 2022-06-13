@@ -24,19 +24,6 @@
         "custom_css": ""
       }
     },
-    "featured-collection-1": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "collection_description": true,
-        "collection": "",
-        "collection_style": "grid",
-        "products_per": 4,
-        "products_limit": 4,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "image-text-1": {
       "type": "image-text",
       "settings": {
@@ -54,19 +41,22 @@
         "block-1": {
           "type": "collection",
           "settings": {
-            "feature_collection": ""
+            "feature_collection": "accessories",
+            "image": "shopify:\/\/shop_images\/Americana_Tile_600x_d577eb49-23a6-458b-a54d-d99347eea127.png"
           }
         },
         "block-2": {
           "type": "collection",
           "settings": {
-            "feature_collection": ""
+            "feature_collection": "",
+            "image": "shopify:\/\/shop_images\/Slider-Mobile_600x_3e875093-cddc-4c2d-8d3f-63743b83ce78.png"
           }
         },
         "block-3": {
           "type": "collection",
           "settings": {
-            "feature_collection": ""
+            "feature_collection": "",
+            "image": "shopify:\/\/shop_images\/Americana_Tile_600x_d577eb49-23a6-458b-a54d-d99347eea127.png"
           }
         },
         "block-4": {
@@ -121,7 +111,6 @@
   },
   "order": [
     "image-with-text-overlay-1",
-    "featured-collection-1",
     "image-text-1",
     "collection-list-1",
     "newsletter-1"
