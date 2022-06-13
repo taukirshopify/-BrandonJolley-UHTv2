@@ -37,6 +37,12 @@
           "settings": {
             "collapsible_tab_heading": "DESCRIPTION"
           }
+        },
+        "44e7b5af-39b6-4c16-8e2d-4b47763d5908": {
+          "type": "SizeChartdetails",
+          "settings": {
+            "collapsible_tab_heading": "FIT AND CARE"
+          }
         }
       },
       "block_order": [
@@ -44,7 +50,8 @@
         "price",
         "form",
         "2ab693e4-8fd0-484b-8c15-f7826461dc2f",
-        "3fcb4630-6130-4def-9e87-c2923340dec0"
+        "3fcb4630-6130-4def-9e87-c2923340dec0",
+        "44e7b5af-39b6-4c16-8e2d-4b47763d5908"
       ],
       "settings": {
         "product_breadcrumb": false,
