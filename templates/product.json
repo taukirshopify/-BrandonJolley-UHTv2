@@ -55,7 +55,7 @@
         "gallery_arrows": true,
         "enable_product_lightbox": true,
         "activate_zoom": true,
-        "slideshow_speed": 0,
+        "slideshow_speed": 5,
         "slideshow_animation": "fade",
         "thumbnail_position": "left",
         "enable_thumbnail_slider": true
