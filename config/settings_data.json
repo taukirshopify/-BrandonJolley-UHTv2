@@ -13,8 +13,9 @@
           "footer-0": {
             "type": "logo",
             "settings": {
-              "title": "Title",
-              "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+              "image": "shopify:\/\/shop_images\/Transparent-logo_7_21_a8085116-29a8-458f-8c2b-846e134a5256.png",
+              "title": "",
+              "content": "<p>Subscribe to our newsletter and always be the first to hear about what is happening.<\/p>",
               "text_align": "left",
               "social_icons_footer": false
             }
@@ -32,21 +33,12 @@
               "menu": "",
               "social_icons_footer": false
             }
-          },
-          "footer-3": {
-            "type": "text",
-            "settings": {
-              "title": "Title",
-              "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-              "social_icons_footer": false
-            }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2",
-          "footer-3"
+          "footer-2"
         ],
         "settings": {
           "copyright_text": "",
