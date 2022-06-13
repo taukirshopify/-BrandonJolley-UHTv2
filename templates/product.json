@@ -25,11 +25,6 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-          }
-        },
         "2ab693e4-8fd0-484b-8c15-f7826461dc2f": {
           "type": "collapsible-tab",
           "settings": {
@@ -42,7 +37,6 @@
         "title",
         "price",
         "form",
-        "share",
         "2ab693e4-8fd0-484b-8c15-f7826461dc2f"
       ],
       "settings": {
