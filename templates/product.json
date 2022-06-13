@@ -31,13 +31,21 @@
             "collapsible_tab_heading": "Collapsible tab",
             "collapsible_tab_text": "<p>Use this text to share information about your product.<\/p>"
           }
+        },
+        "9c1b31c2-c6f0-484f-a771-9d011ae6d718": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "Collapsible tab",
+            "collapsible_tab_text": "<p>Use this text to share information about your product.<\/p>"
+          }
         }
       },
       "block_order": [
         "title",
         "price",
         "form",
-        "2ab693e4-8fd0-484b-8c15-f7826461dc2f"
+        "2ab693e4-8fd0-484b-8c15-f7826461dc2f",
+        "9c1b31c2-c6f0-484f-a771-9d011ae6d718"
       ],
       "settings": {
         "product_breadcrumb": false,
