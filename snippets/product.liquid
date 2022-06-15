@@ -452,6 +452,58 @@
                 </div>
 
               </details>
+              {% when 'Video' %}
+
+                  
+           
+              <details class="collapsible-tab">
+                <summary class="collapsible-tab__heading">
+                  <span> {{ block.settings.collapsible_tab_heading | escape }}</span>
+
+                </summary>
+
+                <div class="collapsible-tab__text  collapgetabcss">
+                  {% if product.description contains '[product_video]' %}
+                    {% assign product_video_first = product.description | split: '[/product_video]' | first %}
+                    {% assign product_video_final = product_video_first | split: '[product_video]' | last %}
+                    
+                    
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ product_video_final }}" frameborder="0" allowfullscreen></iframe>
+
+                    {% else%}
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x36_QR28WDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  {% endif %}
+                </div>
+
+              </details>
+              {% when 'MEASUREMENT' %}
+
+                  
+           
+              <details class="collapsible-tab">
+                <summary class="collapsible-tab__heading">
+                  <span> {{ block.settings.collapsible_tab_heading | escape }}</span>
+
+                </summary>
+
+                <div class="collapsible-tab__text  collapgetabcss">
+                  <h4>Click below to check out real life sizing and measurements.</h4>
+                    <div class="menu-wrapper">
+                      <ul>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                        <li><a href="">Home about us</a></li>
+                      </ul>
+                    </div>
+                  <h5>Need help measuring?  Click here for our How to Measure Guide!</h5>
+                </div>
+
+              </details>
     
                
       
