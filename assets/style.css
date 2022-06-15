@@ -1863,9 +1863,14 @@ footer .social_icons a, footer .social_icons a:visited {
 }
 .menu-wrapper.prodct-menu ul li {
   display: block;
+  padding: 8px 0;
 }
 .menu-wrapper.prodct-menu ul li a {
   text-decoration: underline;
   color: red;
+}
+
+.sizing-warpper img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

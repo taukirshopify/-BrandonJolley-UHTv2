@@ -17,28 +17,31 @@
   "
 >
   <div
-    class="
-      container
-      gallery-section
-      gallery-{{ section.settings.gallery_type }}
-      {% if section.settings.wide_display %}
-        adjust-columns
-      {% endif %}
+    class="container
     "
     id="gallery_section-{{ section.id }}"
   >
     <div class="row">
     <div class="col-12">
-      <div class="page-title">
-          <h4>Hllo this is home apge</h4>
-
-
+ 
+    
+    </div>
+    <div class="col-md-6">
+      <div class="sizing-warpper">
+        <img src="{{section.settings.img | img_url:""}}" alt="">
       </div>
-    
     </div>
     
     </div>
-
+<div class="col-12">
+  <div class="menu-wrapper prodct-menu">
+    <ul>
+      {% for link in linklists[section.settings.menu].links %}
+      <li><a href="{{link.url}}">{{ link.title }}</a></li> 
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 
 
@@ -52,7 +55,16 @@
   "class": "shopify-section--Sizing",
  
   "settings": [
-    
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "select your sizing image"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Slect you Sizing meanu"
+    }
   ],
 
   "presets": [
@@ -64,3 +76,12 @@
 }
 
 {% endschema %}
+
+
+<style>
+ h1{
+  text-transform: uppercase;
+
+}
+
+</style>
