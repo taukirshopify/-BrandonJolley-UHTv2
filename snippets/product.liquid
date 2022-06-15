@@ -491,20 +491,16 @@
                   <h4>
 
 
-                    {{ block.settings.texta}}
+                    {{ block.settings.texta | escape}}
                   </h4>
                     <div class="menu-wrapper">
                       <ul>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
-                        <li><a href="">Home about us</a></li>
+                      {% for link in lisnklists[block.settings.menu].links %} 
+                        <li><a href="{{link.url}}">{{ link.title}}</a></li>
+                        {% endfor %}
                       </ul>
                     </div>
-                  <h5>Need help measuring?  Click here for our How to Measure Guide!</h5>
+                  <h5>{{block.settings.typetext}}</h5>
                 </div>
 
               </details>
