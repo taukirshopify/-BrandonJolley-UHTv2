@@ -1,14 +1,32 @@
 {
   "sections": {
     "main": {
-      "type": "page-template"
+      "type": "page-template",
+      "settings": {
+      }
+    },
+    "1655289185d8c9d059": {
+      "type": "sizepage",
+      "settings": {
+      }
     },
     "newsletter": {
-      "type": "newsletter"
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
     "main",
+    "1655289185d8c9d059",
     "newsletter"
   ]
 }
