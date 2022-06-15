@@ -57,6 +57,9 @@
   %}
 {% endif %}
 
+                       
+
+
 <div class="product-main product-{{ product.id }}">
   <div
     class="
@@ -430,25 +433,30 @@
                   </details>
                 {% endif %}
               {% when 'SizeChartdetails' %}
-                {% if block.settings.collapsible_tab_heading != blank %}
-                  <details class="collapsible-tab">
-                    <summary class="collapsible-tab__heading">
-                      <span>{{ block.settings.collapsible_tab_heading | escape }}</span>
+
+                  
+           
+              <details class="collapsible-tab">
+                <summary class="collapsible-tab__heading">
+                  <span> {{ block.settings.collapsible_tab_heading | escape }}</span>
+
+                </summary>
+
+                <div class="collapsible-tab__text  collapgetabcss">
+                   
+                  {% if product.description contains '[short_chart]' %}
+                  {% assign short_cart_first = product.description | split: '[/short_chart]' | first %}
+                  {% assign short_cart_final = short_cart_first | split: '[short_chart]' | last %}
+                  {{ short_cart_final }}
+                  {% endif %}
+                </div>
+
+              </details>
     
-                    </summary>
-  
-                    <div class="collapsible-tab__text  collapgetabcss">
-                       
-                      {% if product.description contains '[short_chart]' %}
-                        {% assign sizechartfirst = product.description | split: '[/short_chart]' | first %}
-                        {% assign sizechartfinal = sizechartfirst | split: '[short_chart]' | last %}
-                    
-                        {{ sizechartfinal }}
-                        {% endif %}
-                    </div>
-  
-                  </details>
-                {% endif %}
+               
+      
+                
+              
    
             {% when 'tabs' %}
               {% assign tabs_below_product_gallery = false %}

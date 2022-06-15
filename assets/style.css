@@ -1821,4 +1821,39 @@ footer .social_icons a, footer .social_icons a:visited {
 .collapgetabcss ul li {
   font-size: 13px !important;
 }
+
+.size-chart {
+  overflow-y: hidden;
+  padding: 10px 0;
+}
+.size-chart table {
+  border: 1px solid #ccc;
+  width: auto !important;
+  color: #666;
+  background: #eaebec;
+  width: 600px !important;
+}
+.size-chart table thead {
+  background: #6ac8bf !important;
+}
+.size-chart table thead tr th {
+  color: #fff;
+  padding: 5px;
+}
+.size-chart table td {
+  padding: 5px;
+}
+
+.product-main ::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.product-main ::-webkit-scrollbar {
+  background-color: #F5F5F5;
+  height: 6px;
+  border-radius: 30px;
+}
+.product-main ::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 2px solid #555555;
+}
 /*# sourceMappingURL=style.css.map */
