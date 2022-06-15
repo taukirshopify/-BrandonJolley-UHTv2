@@ -1,0 +1,66 @@
+<script
+  type="application/json"
+  data-section-type="Sizing"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+
+<section
+  class="
+    section
+    {% if section.settings.wide_display == true %}
+      is-width-wide
+      has-no-side-gutter
+    {% endif %}
+    {{ section.settings.css_class }}
+  "
+>
+  <div
+    class="
+      container
+      gallery-section
+      gallery-{{ section.settings.gallery_type }}
+      {% if section.settings.wide_display %}
+        adjust-columns
+      {% endif %}
+    "
+    id="gallery_section-{{ section.id }}"
+  >
+    <div class="row">
+    <div class="col-12">
+      <div class="page-title">
+          <h4>Hllo this is home apge</h4>
+
+
+      </div>
+    
+    </div>
+    
+    </div>
+
+
+
+
+    
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sizing",
+  "class": "shopify-section--Sizing",
+ 
+  "settings": [
+    
+  ],
+
+  "presets": [
+    {
+      "name": "Size"
+     
+    }
+  ]
+}
+
+{% endschema %}

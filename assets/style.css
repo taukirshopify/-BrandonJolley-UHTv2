@@ -1856,4 +1856,16 @@ footer .social_icons a, footer .social_icons a:visited {
   background-color: #000000;
   border: 2px solid #555555;
 }
+
+.menu-wrapper.prodct-menu {
+  margin: 20px 0;
+  text-align: left;
+}
+.menu-wrapper.prodct-menu ul li {
+  display: block;
+}
+.menu-wrapper.prodct-menu ul li a {
+  text-decoration: underline;
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */

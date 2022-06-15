@@ -1,14 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "page-template",
-      "settings": {
-      }
+      "type": "page-template"
     },
     "newsletter": {
-      "type": "newsletter",
-      "settings": {
-      }
+      "type": "newsletter"
     }
   },
   "order": [
