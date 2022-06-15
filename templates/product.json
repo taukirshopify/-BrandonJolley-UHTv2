@@ -53,8 +53,10 @@
         "796372cf-c2fa-4e90-81ad-df269753b99a": {
           "type": "MEASUREMENT",
           "settings": {
-            "collapsible_tab_heading": "Amin shoping Mal",
-            "home_welcome_message": "Welcome to my shop!"
+            "collapsible_tab_heading": "MEASUREMENT",
+            "typetext": "Welcome to my shop!",
+            "menu": "footer",
+            "texta": "Click below to check out real life sizing and measurements."
           }
         }
       },
