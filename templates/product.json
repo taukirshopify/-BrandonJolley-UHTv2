@@ -49,6 +49,13 @@
           "settings": {
             "collapsible_tab_heading": "Video"
           }
+        },
+        "796372cf-c2fa-4e90-81ad-df269753b99a": {
+          "type": "MEASUREMENT",
+          "settings": {
+            "collapsible_tab_heading": "Amin shoping Mal",
+            "home_welcome_message": "Welcome to my shop!"
+          }
         }
       },
       "block_order": [
@@ -58,7 +65,8 @@
         "2ab693e4-8fd0-484b-8c15-f7826461dc2f",
         "3fcb4630-6130-4def-9e87-c2923340dec0",
         "44e7b5af-39b6-4c16-8e2d-4b47763d5908",
-        "8c6137e1-2979-4a9d-a4c1-4f3a1e38ca84"
+        "8c6137e1-2979-4a9d-a4c1-4f3a1e38ca84",
+        "796372cf-c2fa-4e90-81ad-df269753b99a"
       ],
       "settings": {
         "product_breadcrumb": false,
